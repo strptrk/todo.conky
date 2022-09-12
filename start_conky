@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+monitor_count=$(xrandr | grep ' conn' | wc -l)
+
+conky
+for (( i = 1; i < $monitor_count; i++ )); do
+    conky -x "-$(( 1920 * $i - 52 ))"
+done
+
+# vim: ft=sh
