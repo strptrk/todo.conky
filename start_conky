@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# this script starts conky on all available monitors in the same position
+
 monitor_count=$(xrandr | grep ' conn' | wc -l)
 
 conky
